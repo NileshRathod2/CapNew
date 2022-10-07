@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : Nilesh Rathod (Drizzle)
+ * @group             : 
+ * @last modified on  : 10-07-2022
+ * @last modified by  : Nilesh Rathod (Drizzle)
+**/
 public class apexBatchExample implements Database.Batchable<sObject>{
     public integer countNumber = 0;
     //Start 
@@ -20,3 +27,4 @@ public class apexBatchExample implements Database.Batchable<sObject>{
     }
 
 }
+//
