@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : Nilesh Rathod (Drizzle)
+ * @group             : 
+ * @last modified on  : 10-07-2022
+ * @last modified by  : Nilesh Rathod (Drizzle)
+**/
 public class ApexQueableClass implements Queueable{
   
 	private List<Account> accList;
@@ -16,5 +23,5 @@ public class ApexQueableClass implements Queueable{
      }
  update accList;
 }
-
+//
 }
