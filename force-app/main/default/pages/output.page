@@ -1,0 +1,56 @@
+<apex:page standardController="Member__c" extensions="Controller">
+
+<apex:form >
+   
+   <apex:pageBlock title="Member Information">
+        <apex:pageBlockSection title="Member Detail" >
+             <apex:outputField value="{!Member__c.Name}"/>
+            <apex:outputField value="{!Member__c.OwnerId}"/>
+            <apex:outputfield value="{!Member__c.FlatNumber__c}"/>     
+             <apex:outputfield value="{!Member__c.Name__c}"/>
+             <apex:outputfield value="{!Member__c.Gender__c}"/> 
+             <apex:outputfield value="{!Member__c.FamilyCount__c}"/> 
+             <apex:outputfield value="{!Member__c.PhoneNumber__c}"/> 
+             <apex:outputfield value="{!Member__c.Email__c}"/> 
+             <apex:outputfield value="{!Member__c.AdharNumber__c}"/>
+             <apex:outputfield value="{!Member__c.PAN_Number__c}"/>
+             <apex:outputfield value="{!Member__c.FlatType__c}"/> 
+             <apex:outputfield value="{!Member__c.Parking__c}"/>
+             <apex:outputfield value="{!Member__c.Owner__c}" /> 
+        </apex:pageBlockSection>
+        
+        
+          
+           <apex:pageBlockSection title="Owner Section" >
+               <apex:outputfield value="{!Member__c.MaintainaceAmountDue__c}"/>     
+           </apex:pageBlockSection> 
+        
+        
+        
+           
+           <apex:pageBlockSection title="Tenant Section" >
+              <apex:outputfield value="{!Member__c.PermanentAddress__c}"/>
+              <apex:outputfield value="{!Member__c.OfficeAddress__c}"/>
+              <apex:outputfield value="{!Member__c.ReferenceName__c}"/>
+              <apex:outputfield value="{!Member__c.ReferencePhone__c}"/>
+              <apex:outputfield value="{!Member__c.PoliceVerificationNumber__c}"/>
+              <apex:outputfield value="{!Member__c.FamilyStatus__c}"/>
+              <apex:outputfield value="{!Member__c.TenureFrom__c}"/>
+              <apex:outputfield value="{!Member__c.TenureTo__c}"/>
+              <apex:outputfield value="{!Member__c.RentPerMonth__c}"/>
+              <apex:outputfield value="{!Member__c.DepositAmount__c}"/>
+              <apex:outputfield value="{!Member__c.TotalRent__c}"/>
+              <apex:outputfield value="{!Member__c.MaintainaceAmountDue__c}"/>     
+           </apex:pageBlockSection> 
+        
+        
+        
+     <apex:pageBlockButtons >
+        <apex:commandButton value="Edit" action="{!Edit}"/>
+        <apex:commandButton value="Clone" action="{!Clonee}"/>
+        <apex:commandButton value="Delete" action="{!Delete}"/>
+     </apex:pageBlockButtons>
+    
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

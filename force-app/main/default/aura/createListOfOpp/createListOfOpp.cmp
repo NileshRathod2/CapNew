@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" 
+                controller="createListOfOppClass">
+    <aura:handler name="init" value="{!this}" action="{!c.handleClick}" />
+    <aura:attribute name="oppList" type="List" />
+    
+    <aura:iteration items="{!v.oppList}" var="item">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <span>{!item.Id}</span>
+            </div>
+            <div class="slds-col">
+                <span>{!item.Name}</span>
+            </div>
+            <div class="slds-col">
+                <span>{!item.Stagename}</span>
+            </div>
+            <div class="slds-col">
+                <span>{!item.Amount}</span>
+            </div>
+        </div>
+    </aura:iteration>
+</aura:component>

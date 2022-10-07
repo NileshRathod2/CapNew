@@ -1,0 +1,64 @@
+<apex:page controller="SectionDetailsControllerVf" renderAs="pdf" showHeader="false"  applyBodyTag="false" applyHtmlTag="false">
+    <head>
+        <style>
+            .bold{
+            color: rgb(8, 104, 15);
+            font-weight : bold;
+           
+            }
+        </style>
+    </head>
+    <html>
+        <h2 >
+            Details
+        </h2>
+        <apex:form >        
+            <apex:repeat value="{!lstSections}" var="field" >               
+                <ul class="slds-accordion">
+                    <li class="slds-accordion__list-item">
+                        <section class="slds-accordion__section slds-is-open">
+                            <div class="slds-accordion__summary">
+                                <h2 class="slds-accordion__summary-heading">
+                                    <button class="slds-button slds-button_reset slds-accordion__summary-action" aria-controls="referenceId-21" aria-expanded="true" title="Accordion summary">
+                                        
+                                        <span class="slds-accordion__summary-content"><b>{!field.label}</b></span>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="slds-accordion__content" id="referenceId-21">
+                                <apex:repeat value="{!field.sectionFields}" var="fields">
+                                    <br/>
+                                    
+                                    <font class="bold"> {!fields.label} : </font>  {!con[fields.apiName]} <br/>
+                                    
+                                    
+                                    <apex:outputLabel rendered="{!If(field.label == 'Address Information' ,true,false)}" >
+                                        <apex:outputLabel rendered="{!If(fields.apiName == 'MailingStreet' ,true,false)}" >
+                                        {!con.MailingCity}
+                                        {!con.MailingState}
+                                        {!con.MailingPostalCode}
+                                        {!con.MailingCountry}   
+                                        </apex:outputLabel>
+                                    </apex:outputLabel>
+                                    
+                                     <apex:outputLabel rendered="{!If(field.label == 'Address Information' ,true,false)}" >
+                                        <apex:outputLabel rendered="{!If(fields.apiName == 'OtherStreet' ,true,false)}" >
+                                        {!con.OtherCity}
+                                        {!con.OtherState}
+                                        {!con.OtherPostalCode}
+                                        {!con.OtherCountry}   
+                                        </apex:outputLabel>
+                                    </apex:outputLabel>
+                                    
+                                    
+                                </apex:repeat>
+                                
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+                
+            </apex:repeat> 
+        </apex:form>
+    </html>
+</apex:page>

@@ -1,0 +1,26 @@
+<template>
+  <!---- <lightning-card>
+       
+        <lightning-datatable
+               key-field="id"
+               data={pendingApprovals}
+               columns={columns}
+               hide-checkbox-column="true"           
+               onrowaction={callRowAction}>
+
+        </lightning-datatable>
+    </lightning-card> -->
+
+    <template for:each={pendingApprovals} for:item="pending">
+        <lightning-layout-item key={pending.RecordName} class="slds-col slds-size_1-of-1" >
+    <lightning-card  variant="Narrow"  title={pending.RecordName} icon-name="standard:contact">
+        <lightning-button-menu  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions">
+            <lightning-menu-item data-id={pending.RecordId} label="Approve" onclick={handleClick}></lightning-menu-item>
+            <lightning-menu-item data-id={pending.RecordId} label="Reject" onclick={handleRaject}></lightning-menu-item>
+        </lightning-button-menu>
+        <p class="slds-p-horizontal_small">Approval Status : {pending.Status}</p>
+        <p class="slds-p-horizontal_small">Submitter Name : {pending.Submitter}</p>
+    </lightning-card>
+</lightning-layout-item>
+</template>
+</template>

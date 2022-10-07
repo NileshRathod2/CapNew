@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="fieldList" type="String[]"
+                    default="['FirstName','LastName','Email','Phone']" />
+    
+    <lightning:recordForm
+                
+        objectApiName="Contact"
+        fields="{!v.fieldList}"
+        columns="2"
+        mode="edit" 
+   		oncancel="{!c.myAction}"/>
+</aura:component>

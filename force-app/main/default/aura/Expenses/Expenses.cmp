@@ -1,0 +1,45 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="ExpesesController">
+    
+    
+    
+    <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+        
+        <div class="slds-size_1-of-2 slds-p-left_medium slds-p-right_medium">
+            <lightning:input name="Name" aura:id="EName" label="Expenses Name" placeholder="type here..."/>
+        </div>      
+        <div class="slds-size_1-of-2 slds-p-left_medium slds-p-right_medium">
+            <lightning:input name="Expenses" aura:id="ExpComments" label="Expenses Comments" placeholder="type here..."/>
+        </div>
+        <div class="slds-size_1-of-2 slds-p-left_medium slds-p-right_medium">
+			<lightning:input type="date" aura:id="ExpenseDate" name="input" label="Expenses Date" />
+        </div>
+        		  
+        <div class="slds-size_1-of-2 slds-p-left_medium slds-p-right_medium">
+         <lightning:input label="TA" aura:id="TeaExp" type="number" formatter="currency"/>
+        </div>
+        <div class="slds-size_1-of-2 slds-p-left_medium slds-p-right_medium">
+         <lightning:input label="OA" aura:id="OtherExp" type="number" formatter="currency"/>    
+        </div>         
+    </div> 
+    <br/>
+    <aura:attribute  name="options" type="List" default="[
+        { label: 'Car', value: 'car' },
+        { label: 'Bike', value: 'bike' },
+        { label: 'Bus', value: 'bus' },
+        { label: 'Auto', value: 'auto' }]"/>
+
+    <lightning:dualListbox name="TransportMode"
+                           aura:id="Transport"
+                           label= "Select Vehicle"
+                           sourceLabel="Available"
+                           selectedLabel="Selected"
+                           fieldLevelHelp="Select your preferred Vehicle"
+                           options="{!v.options}"
+                           onchange="{! c.handleChange }"/>/>
+    
+    <br/>
+    <center>
+        <lightning:button variant="brand" label="Save" title="Brand action" onclick="{! c.ClickHere }" />
+        <lightning:button variant="brand" label="Cancel" title="Brand action" onclick="{! c.ClickHere }" />
+    </center>       
+</aura:component>

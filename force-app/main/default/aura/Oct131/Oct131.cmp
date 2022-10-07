@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    
+     <lightning:input type="number" name="input1" label="Enter your first Number" placeholder="type here..."/>
+     <lightning:input type="number" name="input2" label="Enter your second Number" placeholder="type here..."/>
+    
+      <lightning:button variant="brand" label="Addition" title="Brand action" onclick="{! c.handleClick }" />
+      <lightning:button variant="brand" label="Substraction" title="Brand action" onclick="{! c.handleClick }" />
+     <lightning:button variant="brand" label="Multiplication" title="Brand action" onclick="{! c.handleClick }" />
+</aura:component>

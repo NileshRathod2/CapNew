@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+
+        <lightning-input type="number" name="input1" label=" First Number "  placeholder="type here..." onchange = "{CaptureNumber}" ></lightning-input>
+        <lightning-input type="number" name="input2" label=" Second Number "  placeholder="type here..." onchange = "{CaptureNumber}" ></lightning-input>
+
+        <br/>
+        <br/>
+
+       
+
+        <lightning-button variant="success" label="Addition" title="Successful action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="success" label="Substraction" title="Successful action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="success" label="Multiply" title="Successful action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+      
+        <br/>
+        <br/>
+        Result : {result}
+        <br/>
+
+
+    </lightning-card>
+</template>

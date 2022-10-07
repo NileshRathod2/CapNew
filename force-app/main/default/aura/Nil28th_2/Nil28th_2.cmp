@@ -1,0 +1,11 @@
+<aura:component >
+     <aura:handler name="cmpEvent" event="c:NilEvent" action="{!c.handleComponentEvent}"/>
+    <aura:attribute name="selectedButton" type="String" />
+    <div class="slds-p-horizontal_medium">
+        <lightning:card title="This is container component" >
+            Button Clicked: {!v.selectedButton}<br/>
+            <c:Nil28th_1 />
+            <br/>
+        </lightning:card>
+    </div>
+</aura:component>

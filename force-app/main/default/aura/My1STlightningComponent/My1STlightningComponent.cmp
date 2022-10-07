@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <div  class="slds-box">
+        <center><h1>Hello Guys! Welcome Back To Premium Learnings</h1></center>
+    </div>
+    
+    
+    <div class="row slds-p-left_medium slds-p-right_medium">
+        <h2 class="header">Basic Input Text</h2>
+        <lightning:input name="input" label="Enter A user name" placeholder="type here..."/>
+    	<lightning:input type="password" label="Enter A Password " name="input3" placeholder="Enter Password"/>
+  		<lightning:button variant="brand" label="Save" title="Primary action"  class="slds-m-left_x-small"></lightning:button>
+        <lightning:button variant="brand" label="Cancel" title="Primary action"  class="slds-m-left_x-small"></lightning:button>
+
+    </div>
+</aura:component>

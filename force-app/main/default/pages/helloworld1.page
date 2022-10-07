@@ -1,0 +1,9 @@
+<apex:page >
+    <h1>
+        My name is lakhan...
+        <br/>
+        this is my second vf page...
+        <br/>
+        if u r good at something ,never do it for free.
+    </h1>
+</apex:page>

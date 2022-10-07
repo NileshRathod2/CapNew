@@ -1,0 +1,17 @@
+<apex:page standardController="Account" extensions="TableController">
+    <apex:pageBlock title="Detail Tag">
+    <apex:detail subject="{!account.Id}" relatedList="false"/>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="OutputLink">
+    <apex:outputLink value="{!$Page.helloworld}">Click here for hello world
+    </apex:outputLink>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Image Tag">
+    <apex:image value="/img/seasonLogos/Winter_22_175x65.png" height="100" width="200"/><br/>
+    <apex:image value="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" height="100" width="200"/><br/>
+    <apex:image value="https://vodafoneideaprivatelimited-dev-ed--c.documentforce.com/servlet/servlet.FileDownload?file=0155g000000ZHgQ" height="100" width="200"/><br/>
+    </apex:pageBlock>
+  
+</apex:page>

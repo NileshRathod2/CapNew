@@ -1,0 +1,28 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="input1" type="integer" description="First Number" />
+    <aura:attribute name="input2" type="integer" description="Second Number" />
+    <aura:attribute name="output" type="integer" description="For result" />
+    
+    <div class="slds-box ">
+        <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+        <div class="slds-size_1-of-2 slds-p-left_medium slds-p-right_medium">
+                
+                <lightning:input aura:id="firstnum" type="number" name="input1" label="Enter a first number"  value="{!v.input1}" required="true" />
+            </div>
+            
+            
+            <div class="slds-size_1-of-2 slds-p-left_medium slds-p-right_medium" >
+                <lightning:input  aura:id="secondnum" type="number" name="input2" label="Enter a second number" value="{!v.input2}" required="true" />
+            </div>
+        </div>
+        <br/>
+        <center>
+               <lightning:button variant="brand" label="Addition" title="Brand action" onclick="{! c.Calculate }" />
+               <lightning:button variant="brand" label="Substraction" title="Brand action" onclick="{! c.Calculate }" />
+                <lightning:button variant="brand" label="Multiplication" title="Brand action" onclick="{! c.Calculate}" />
+                <lightning:button variant="brand" label="Division" title="Brand action" onclick="{! c.Calculate }" />
+
+        </center>        
+        The output is : {!v.output}
+    </div>
+</aura:component>

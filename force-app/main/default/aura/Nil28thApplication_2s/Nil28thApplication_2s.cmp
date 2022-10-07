@@ -1,0 +1,11 @@
+<aura:component >
+     <aura:handler name="AppEvent" event="c:NilEvent2" action="{!c.handleComponentEvent}"/>
+    <aura:attribute name="abc" type="String" />
+    <div class="slds-p-horizontal_medium">
+        <lightning:card title="This is container Appliactin component" >
+             Button Clicked: {!v.abc}<br/>
+            <c:Nil28thApplication_1 />
+            <br/>
+        </lightning:card>
+    </div>	
+</aura:component>

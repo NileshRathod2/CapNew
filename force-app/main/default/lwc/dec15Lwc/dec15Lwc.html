@@ -1,0 +1,44 @@
+<template>
+   <lightning-card title="Details">
+       
+       <div class="slds-m-around_small">
+       <lightning-record-view-form object-api-name={Object}
+                                   record-id={recordId}
+                                   density="Compact">
+           <lightning-accordion allow-multiple-sections-open 
+                                active-section-name={ActiveSession}>
+               <lightning-layout-item class="slds-grid slds-wrap">
+                   
+                   <template for:each={ContactDetails} for:item="field">
+                       <lightning-layout-item key={field.sectionFields} class="slds-col slds-size_1-of-1" >
+                           <lightning-accordion-section name={field.label} label={field.label} class="sectionClass">
+                               <template for:each={field.sectionFields} for:item="fieldFromSubsection">
+                                   <lightning-layout-item key={fieldFromSubsection.apiName} class="slds-col slds-size_1-of-1">
+                                       <div class="slds-form">
+                                       <div class="slds-form-element_horizontal slds-col">
+                                           <label for={labelid} class="subSection">{fieldFromSubsection.label}  </label>
+                                       
+                                       
+                                       
+                                       <lightning-output-field id={fieldid} field-name={fieldFromSubsection.apiName}  variant="label-hidden"></lightning-output-field>
+                                   </div>
+                                   </div>   
+                           </lightning-layout-item>
+                           </template>
+                           </lightning-accordion-section>
+                       </lightning-layout-item>
+                   </template>
+               </lightning-layout-item>
+           </lightning-accordion>
+       </lightning-record-view-form>
+   </div>
+   </lightning-card>
+   <div class="slds-m-around_small">
+       <lightning-button label="Generate PDF" 
+                 icon-name="utility:download"
+                 class="slds-float_right pdf"
+                 variant="brand"
+                 onclick={handelClick}>
+       </lightning-button>
+   </div>
+</template>

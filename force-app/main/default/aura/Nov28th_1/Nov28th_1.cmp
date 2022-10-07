@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="childVar" type="String" />
+	<lightning:button variant="success" label="{!v.childVar}" title="Success" onclick="{! c.handleClick }"/>
+    <lightning:button variant="success"  label="{!v.childVar}" title="Success" onclick="{! c.handleClick }"/>
+    <lightning:button variant="success"  label="{!v.childVar}" title="Success" onclick="{! c.handleClick }"/>
+    <br/>
+    {!v.childVar}
+</aura:component>

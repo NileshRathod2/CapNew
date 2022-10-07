@@ -1,0 +1,22 @@
+<apex:page standardController="consultant__c" extensions="consultantextensionController" >
+    <apex:form >
+        <apex:pageBlock title="Consultant Edit">
+            <apex:pageBlockSection title="Information">
+            <apex:inputField value="{!consultant__c.Name}"/> 
+            <apex:outputField value="{!consultant__c.ownerid}"/> 
+             <apex:inputField value="{!consultant__c.Type__c}"/>
+             <apex:inputField value="{!consultant__c.Sallary__c}"/>
+             <apex:inputField value="{!consultant__c.PanCardNumber__c}"/><br/>
+             <apex:inputField value="{!consultant__c.SSN__c}"/><br/>
+             <apex:inputField value="{!consultant__c.PhoneNo__c}"/><br/>
+             <apex:inputField value="{!consultant__c.Email__c}"/><br/>
+             <apex:inputField value="{!consultant__c.ConsultantEmail__c}"/><br/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                 <apex:commandButton action="{!save}" value="Save"/>
+                 <apex:commandButton action="{!save}" value="Save&New"/>
+                 <apex:commandButton action="{!Cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

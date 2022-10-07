@@ -1,0 +1,28 @@
+<apex:page controller="sectionDetailsController" >
+  	<h2>
+        Details
+    </h2>
+ <!---
+  <apex:pageBlock >
+        <apex:pageBlockTable  value="{!lstsections}" var="o">
+            <apex:column value="{!o.label}"/>
+            <apex:column value="{!o.sectionFields}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock> -->
+
+     <head>
+        <apex:slds />
+    </head>
+   
+  <apex:repeat value="{!lstSections}" var="field">
+       <apex:pageBlock >
+            <apex:pageBlockSection title="{!field.label}">
+                <apex:pageBlockSectionItem >
+                    <apex:repeat value="{!field.sectionFields}" var="fields">
+                        {!fields.label}<br/>
+                    </apex:repeat>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+      </apex:pageBlock>
+        </apex:repeat>
+</apex:page>

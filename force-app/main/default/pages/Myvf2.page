@@ -1,0 +1,10 @@
+<apex:page >
+<h1>My Name: </h1> {!$User.FirstName} <br/>
+<h1>My Name: </h1> {!$User.LastName} <br/>
+    <h1>My Company  Name: </h1> {!$User.CompanyName} <br/>
+    <h1> My Profile ID : </h1>  {!$Profile.Id} <br/>
+    <h1> My Profile Name : </h1>  {!$Profile.Name} <br/>
+    <h1> My User Role : </h1>  {!$UserRole.Name}  <br/>
+    <h1> My Organization Name : </h1>  {!$Organization.Name}  <br/>
+    <h1> My Organization  ID : </h1> {!$Organization.Id}   <br/>
+</apex:page>

@@ -1,0 +1,18 @@
+<aura:component >
+    <aura:attribute name="selectOption" type="String" />
+    <div class="slds-p-horizontal_medium">
+    <lightning:card title="This is container component" >
+        <lightning:select name="select1" label="What should be the name of button ?" required="true" aura:id ="dropDown" onchange="{!c.handleClicks}">
+        <option value="">choose one...</option>
+        <option value="Stone">Stone</option>
+        <option value="paper">paper</option>
+        <option value="Scissor">Scissor</option>
+    </lightning:select>
+        
+        <br/>
+        <br/>
+        
+        <c:Nov28th_1  childVar="{!v.selectOption}" />
+    </lightning:card>
+        </div>
+</aura:component>

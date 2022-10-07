@@ -1,0 +1,10 @@
+<aura:component >
+    
+    <aura:registerEvent name="AppEvent" type="c:NilEvent2" /> 
+    <lightning:button variant="destructive" label="MIA1" title="Destructive action" onclick="{! c.handleClick }"/>
+    <lightning:button variant="destructive" label="ONEPLUS-9R" title="Destructive action" onclick="{! c.handleClick }"/>
+    <lightning:button variant="destructive" label="Apple-13ProMax" title="Destructive action" onclick="{! c.handleClick }"/>
+    <br/>
+    
+    
+</aura:component>

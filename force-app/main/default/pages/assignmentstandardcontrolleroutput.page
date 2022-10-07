@@ -1,0 +1,21 @@
+<apex:page standardController="consultant__c" >
+    <apex:form >
+        <apex:pageBlock title="Consultant Edit">
+            <apex:pageBlockSection title="Information">
+            <apex:outputField value="{!consultant__c.Name}"/> 
+            <apex:outputfield value="{!consultant__c.ownerid}"/> 
+             <apex:outputfield value="{!consultant__c.Type__c}"/>
+             <apex:outputfield value="{!consultant__c.Sallary__c}"/>
+             <apex:outputfield value="{!consultant__c.PanCardNumber__c}"/><br/>
+            
+             <apex:outputfield value="{!consultant__c.PhoneNo__c}"/><br/>
+             <apex:outputfield value="{!consultant__c.Email__c}"/><br/>
+             <apex:outputfield value="{!consultant__c.ConsultantEmail__c}"/><br/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                 <apex:commandButton action="{!save}" value="edit"/>
+                 <apex:commandButton action="{!save}" value="delete"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

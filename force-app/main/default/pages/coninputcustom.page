@@ -1,0 +1,32 @@
+<apex:page controller="customConController" tabStyle="consultant__c" >
+     <apex:form >
+         <apex:pageblock title="consultant Edit" >
+            <apex:pageBlockSection title="consultant Information">
+                 <apex:inputField value="{!con.Name}" required="true"/>
+                 <apex:outputField value="{!con.ownerid}"/>
+                 <apex:inputField value="{!con.Type__c}"/>
+                 <apex:inputField value="{!con.Sallary__c}"/> 
+                 
+                 <apex:inputField value="{!con.Date_of_birth__c}"/>
+                <apex:inputHidden />
+                 <apex:inputField value="{!con.Date_of_joining__c}"/>
+                 <apex:inputHidden />
+                 <apex:inputField value="{!con.Country__c}"/>
+                 <apex:inputHidden />
+                 <apex:inputField value="{!con.State__c}"/>
+                 <apex:inputHidden />
+                 <apex:inputField value="{!con.PhoneNo__c}"/>
+                 <apex:inputHidden />
+                 <apex:inputField value="{!con.SSN__c}"/>
+                <apex:inputHidden />
+                 <apex:inputField value="{!con.Email__c}"/>
+                 <apex:inputHidden />
+                 <apex:inputField value="{!con.ConsultantEmail__c}"/>
+                <apex:inputHidden />
+            </apex:pageBlockSection>
+            <apex:pageblockbuttons >
+           <apex:commandButton action="{!save}" value="Save"/>
+            </apex:pageblockbuttons>
+         </apex:pageblock>
+     </apex:form>
+</apex:page>

@@ -1,0 +1,27 @@
+<apex:page controller="SearchPageController" >
+    <apex:form >
+     <apex:inputText value="{!searchString}"/>
+     <apex:commandButton value="search" action="{!search}"/>
+          <apex:pageBlock title="Accounts">
+          <apex:pageBlockTable value="{!accList}" var="a">
+          <apex:column value="{!a.name}"/>
+          <apex:column value="{!a.rating}"/>
+          <apex:column value="{!a.phone}"/>
+          </apex:pageBlockTable>
+          
+          </apex:pageBlock>
+          <apex:pageBlock title="contacts">
+          
+          <apex:pageBlockTable value="{!ccList}" var="b">
+          <apex:column value="{!b.name}"/>
+          <apex:column value="{!b.title}"/>
+          <apex:column value="{!b.leadsource}"/>
+          </apex:pageBlockTable>
+          
+          </apex:pageBlock>
+          <apex:pageBlock title="opportunities">
+          </apex:pageBlock>
+          <apex:pageBlock title="consultants">
+          </apex:pageBlock>
+     </apex:form>
+</apex:page>
